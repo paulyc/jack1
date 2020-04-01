@@ -2439,7 +2439,7 @@ jack_activate (jack_client_t *client)
 		 */
 
 		req.type = SetClientCapabilities;
-		req.x.client_id = client->control->id;
+		req.x.client_id = client->control->uuid;
 		req.x.cap_pid = client->control->pid;
 
 		jack_client_deliver_request (client, &req);
